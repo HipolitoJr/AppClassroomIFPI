@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_send) {
 
         } else if (id == R.id.nav_horario){
-            Intent intent = new Intent(this, HorarioHome.class);
+            Intent intent = new Intent(this, HomeHorarios.class);
             startActivity(intent);
         }
 

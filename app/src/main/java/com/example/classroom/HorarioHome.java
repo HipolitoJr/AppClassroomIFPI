@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.classroom.model.Dia;
 import com.example.classroom.model.Disciplina;
@@ -15,10 +16,17 @@ import com.example.classroom.model.Professor;
 public class HorarioHome extends AppCompatActivity {
     private Button btSeg1, btSeg2,btSeg3,btSeg4,btSeg5, btTer1, btTer2,btTer3,btTer4,btTer5, btQua1,btQua2,btQua3,btQua4,btQua5,btQui1,btQui2,btQui3,btQui4,btQui5,btSex1,btSex2,btSex3,btSex4,btSex5;
     public Horario horario;
+    private TextView title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horario_home);
+        Intent intent = getIntent();
+        String[] turmas = new String[] {"ADS I", "ADS III", "ADS V"};
+        String item = intent.getStringExtra("item");
+        //int item = Integer.parseInt(id);
+        title = (TextView)findViewById(R.id.txt_title_home);
+        title.setText(item);
         btSeg1 = (Button)findViewById(R.id.bt_seg_1);
         btSeg2 = (Button)findViewById(R.id.bt_seg_2);
         btSeg3 = (Button)findViewById(R.id.bt_seg_3);
