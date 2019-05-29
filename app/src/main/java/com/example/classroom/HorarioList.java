@@ -23,20 +23,20 @@ public class HorarioList extends AppCompatActivity {
         lista = (ListView) findViewById(R.id.list_horarios);
         title = (TextView)findViewById(R.id.txt_title_hora_list);
         Intent intent = getIntent();
-        String item = intent.getStringExtra("item");
-        title.setText(item);
+        String itemGet = intent.getStringExtra("item");
+        title.setText(itemGet);
         List<String> turmas_list = new ArrayList<String>();
         String[] turmas = new String[] {"ADSI", "ADSIII", "ADSV"};
         String[] adsi = new String[] {"SEGUNDA 13:00", "SEGUNDA 14:00", "QUARTA 16:00", "QUARTA 17:00"};
         String[] adsiii = new String[] {"TERÇA 15:00", "TERÇA 16:00", "TERÇA 17:00", "QUINTA 13:00", "QUINTA 14:00"};
         String[] adsv = new String[] {"SEGUNDA 15:00", "SEXTA 13:00","SEXTA 14:00","SEXTA 15:00"};
-        if(item.equals("ADS I")){
+        if(itemGet.equals("ADS I")){
             turmas_list = new ArrayList<String>(Arrays.asList(adsi));
         }
-        if(item.equals("ADS III")){
+        if(itemGet.equals("ADS III")){
             turmas_list = new ArrayList<String>(Arrays.asList(adsiii));
         }
-        if(item.equals("ADS V")){
+        if(itemGet.equals("ADS V")){
             turmas_list = new ArrayList<String>(Arrays.asList(adsv));
         }
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, turmas_list);
@@ -51,7 +51,7 @@ public class HorarioList extends AppCompatActivity {
         });
     }
     public void goHorarioList(View v, String item){
-        Intent intent = new Intent(this, HorarioDetail.class);
+        Intent intent = new Intent(this, DiaHorario.class);
         intent.putExtra("item",item);
         startActivity(intent);
     }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HorarioList"></activity>
+        <activity android:name=".DiaHorario"></activity>
+        <activity android:name=".HorarioList" />
         <activity android:name=".HomeHorarios" />
         <activity android:name=".HorarioDetail" />
         <activity android:name=".HorarioHome" />
