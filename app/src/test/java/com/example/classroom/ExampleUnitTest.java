@@ -1,4 +1,4 @@
-package com.example.classroomifpi;
+package com.example.classroom;
 
 import org.junit.Test;
 
